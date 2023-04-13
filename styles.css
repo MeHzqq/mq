@@ -16,18 +16,27 @@ body {
 
 .twitch iframe {
     position: absolute;
-    top: 10px; /* Set this value to the height of the black bar */
+    top: 5%; /* Set this value to the height of the top black bar */
     left: 0;
     width: 100%;
-    height: calc(100% - 10px); /* Adjust the height calculation according to the black bar height */
+    height: 95%; /* Adjust the height calculation according to the top black bar height */
 }
 
-.black-bar {
+.top-black-bar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 10px; /* Set this value to the desired height of the black bar */
+    height: 5%; /* Set this value to the desired height of the top black bar as a percentage */
+    background-color: black;
+}
+
+.bottom-black-bar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%; /* Set this value to the desired width of the bottom black bar as a percentage */
+    height: 5%; /* Set this value to the desired height of the bottom black bar as a percentage */
     background-color: black;
 }
 
