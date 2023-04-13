@@ -1,12 +1,12 @@
 html, body {
     margin: 0;
     height: 100%;
-    overflow: hidden;
 }
 
 .container {
     display: flex;
     height: 100%;
+    overflow: hidden;
 }
 
 .twitch {
@@ -14,18 +14,24 @@ html, body {
     position: relative;
 }
 
-.batperson-chat {
-    flex: 1;
-    position: relative;
-    width: 25%;
-    height: 100%;
-}
-
-iframe {
+.twitch iframe {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
-    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.batperson-chat {
+    flex: 1;
+    position: relative;
+    height: 100%;
+}
+
+.batperson-chat iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
