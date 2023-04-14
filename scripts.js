@@ -14,9 +14,11 @@ function resize(e) {
 
   twitch.style.width = `${containerWidth}px`;
   batpersonChat.style.width = `${chatWidth}px`;
+  resizer.style.left = `${containerWidth}px`;
 }
 
 function stopResize() {
   document.removeEventListener('mousemove', resize);
   document.removeEventListener('mouseup', stopResize);
 }
+
