@@ -10,15 +10,12 @@ resizer.addEventListener('mousedown', (e) => {
 
 function resize(e) {
   const containerWidth = e.clientX - resizer.clientWidth / 2;
-  const chatWidth = window.innerWidth - containerWidth - resizer.clientWidth;
-  
-  twitch.style.width = `${containerWidth}px`;
-  batpersonChat.style.width = `${chatWidth}px`;
-  resizer.style.left = `${containerWidth}px`;
+
+  twitch.style.flexBasis = `${containerWidth}px`;
+  batpersonChat.style.flexBasis = `calc(100% - ${containerWidth}px - ${resizer.clientWidth}px)`;
 }
 
 function stopResize() {
   document.removeEventListener('mousemove', resize);
   document.removeEventListener('mouseup', stopResize);
 }
-
