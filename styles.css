@@ -57,7 +57,7 @@ body {
 .resizer {
     width: 10px;
     height: 100%;
-    background-color: #ccc;
+    background-color: #555; /* Change to dark grey */
     cursor: ew-resize;
     position: absolute;
     top: 0;
