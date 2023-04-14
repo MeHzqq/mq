@@ -9,9 +9,9 @@ resizer.addEventListener('mousedown', (e) => {
 });
 
 function resize(e) {
-  const containerWidth = e.clientX;
-  const chatWidth = window.innerWidth - containerWidth;
-
+  const containerWidth = e.clientX - resizer.clientWidth / 2;
+  const chatWidth = window.innerWidth - containerWidth - resizer.clientWidth;
+  
   twitch.style.width = `${containerWidth}px`;
   batpersonChat.style.width = `${chatWidth}px`;
   resizer.style.left = `${containerWidth}px`;
