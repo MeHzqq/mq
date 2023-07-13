@@ -7,9 +7,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="twitch-embed"></div>
-  <div class="batperson-chat">
+  <div class="container">
+    <div class="twitch">
+      <div id="twitch-embed" style="position: absolute; width: 100%; height: 100%;"></div>
+    </div>
+    <div class="batperson-chat">
       <iframe src="https://chat.batperson.com" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
   </div>
 
   <!-- Load the Twitch embed script -->
@@ -18,8 +22,8 @@
   <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
   <script type="text/javascript">
     new Twitch.Embed("twitch-embed", {
-      width: 854,
-      height: 480,
+      width: "100%",
+      height: "100%",
       channel: "bat_pearson",
       parent: ["mehzqq.github.io"]
     });
